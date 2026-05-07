@@ -11,27 +11,14 @@
 #define EX   6
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     combos {
         compatible = "zmk,combos";
 
         tobt {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <36 37>;
-        };
-
-        tobase {
-            bindings = <&to 0>;
-            key-positions = <40 41>;
-            layers = <4>;
         };
     };
 
@@ -41,14 +28,14 @@
         base {
             display-name = "BASE";
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp LCTRL  &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G  &kp H  &mt RIGHT_SHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RCTRL SEMICOLON  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC  &kp TAB  &lt 1 SPACE  &kp SPACE  &kp RET  &lt 2 ENTER  &mo 3
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp LCTRL  &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G  &kp H  &mt RIGHT_SHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RCTRL SEMICOLON  &kp SQT  &kp LSHFT  &kp Z  &kp X  &lt 4 C  &kp V  &kp B  &kp N  &lt 4 M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC  &kp TAB  &lt 1 SPACE  &kp SPACE  &kp RET  &lt 2 ENTER  &mo 3
             >;
         };
 
         nav {
             display-name = "NAV";
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC  &bt BT_CLR  &caps_word  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &kp LSHFT  &studio_unlock  &trans  &trans  &trans  &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &kp LGUI  &trans  &kp SPACE  &kp RET  &kp KP_NUMBER_0  &kp RALT
+&kp TAB  &kp ESCAPE  &kp HOME  &kp UP_ARROW  &kp END  &kp DELETE  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC  &bt BT_CLR  &kp CLCK  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INS  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &trans  &kp LSHFT  &kp A  &kp B  &kp C  &kp D  &kp E  &kp F  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT  &trans  &none  &trans  &kp SPACE  &kp RET  &kp KP_NUMBER_0  &kp X
             >;
         };
 
@@ -66,33 +53,24 @@
             >;
         };
 
-       sw {
-           display-name = "SW";
-           bindings = <
-                &mo TAB   &trans &kp F7 &kp F8 &kp F9 &kp F12   &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &trans &trans &kp BSPC
-                &kp LCTRL &trans &kp F4 &kp F5 &kp F6 &kp F11   &trans       &trans      &trans       &trans &trans &trans
-                &bt LSHFT &trans &kp F1 &kp F2 &kp F3 &kp F10   &trans       &trans      &trans       &trans &trans &trans
-                                   &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
+        sw {
+            display-name = "SW";
+            bindings = <
+&mo TAB  &none  &kp HOME  &kp UP  &kp END  &none  &none  &kp HOME  &kp UP  &kp END  &trans  &kp BSPC  &kp LCTRL  &none  &kp LEFT  &kp DOWN  &kp LEFT  &none  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &bt LSHFT  &none  &none  &none  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans  &none  &kp SPACE  &kp SPACE  &kp RET  &kp ENTER  &none
             >;
         };
 
         bts {
-           display-name = "BT";
-           bindings = <
-                &mo TAB   &trans &kp F7 &kp F8 &kp F9 &kp F12   &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &trans &trans &kp BSPC
-                &kp LCTRL &trans &kp F4 &kp F5 &kp F6 &kp F11   &trans       &trans      &trans       &trans &trans &trans
-                &bt LSHFT &trans &kp F1 &kp F2 &kp F3 &kp F10   &trans       &trans      &trans       &trans &trans &trans
-                                   &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
+            display-name = "BT";
+            bindings = <
+&mo TAB  &bt BT_CLR  &trans  &trans  &trans  &trans  &to 0  &trans  &trans  &trans  &trans  &kp BSPC  &kp LCTRL  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans  &trans  &bt LSHFT  &studio_unlock  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none  &kp SPACE  &kp SPACE  &kp RET  &none  &none
             >;
         };
 
         ex {
-           display-name = "EX";
-           bindings = <
-                &mo TAB   &trans &kp F7 &kp F8 &kp F9 &kp F12   &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &trans &trans &kp BSPC
-                &kp LCTRL &trans &kp F4 &kp F5 &kp F6 &kp F11   &trans       &trans      &trans       &trans &trans &trans
-                &bt LSHFT &trans &kp F1 &kp F2 &kp F3 &kp F10   &trans       &trans      &trans       &trans &trans &trans
-                                   &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
+            display-name = "EX";
+            bindings = <
+&mo TAB  &trans  &kp F7  &kp F8  &kp F9  &kp F12  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &trans  &kp BSPC  &kp LCTRL  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &trans  &trans  &trans  &trans  &bt LSHFT  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans  &trans  &trans  &trans  &kp LGUI  &mo NAV  &kp SPACE  &kp RET  &mo 2  &kp RALT
             >;
         };
     };
