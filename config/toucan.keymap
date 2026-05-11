@@ -20,13 +20,18 @@
             bindings = <&to 5>;
             key-positions = <36 37 38>;
         };
+
+        bspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
     };
 
     behaviors {
         hm: hm {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_MOD";
-            bindings = <&mt>, <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
