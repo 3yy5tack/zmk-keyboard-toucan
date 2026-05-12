@@ -45,17 +45,10 @@
             flavor = "tap-preferred";
         };
 
-        s_capsw: shift_capsword {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_CAPSWORD";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&caps_word>;
-        };
-
-        s_capsw_caps: shift_capsword_caps {
+        s_caps: shift_caps {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_CAPSWORD_CAPS";
-            bindings = <&kp>, <&s_capsw>;
+            label = "SHIFT_CAPS";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -85,7 +78,7 @@
         nav {
             display-name = "NAV";
             bindings = <
-&kp TAB  &kp ESCAPE  &kp HOME  &kp UP_ARROW  &kp END  &kp DELETE  &kp X  &kp N7  &kp N8  &kp N9  &kp BACKSPACE  &kp BSPC  &bt BT_CLR  &s_capsw_caps CLCK 0  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INS  &hex_head  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp BACKSPACE  &trans  &kp LSHFT  &kp A  &kp B  &kp C  &kp D  &kp E  &kp F  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT  &trans  &none  &trans  &kp SPACE  &kp RET  &kp KP_NUMBER_0  &kp X
+&kp TAB  &kp ESCAPE  &kp HOME  &kp UP_ARROW  &kp END  &kp DELETE  &kp X  &kp N7  &kp N8  &kp N9  &caps_word  &kp BSPC  &bt BT_CLR  &s_caps CAPSLOCK LEFT_SHIFT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INS  &hex_head  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp BACKSPACE  &trans  &kp LSHFT  &kp A  &kp B  &kp C  &kp D  &kp E  &kp F  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT  &trans  &none  &trans  &kp SPACE  &kp RET  &kp KP_NUMBER_0  &kp X
             >;
         };
 
@@ -106,7 +99,7 @@
         sw {
             display-name = "SW";
             bindings = <
-&none  &none  &kp LS(LC(TAB))  &kp LC(TAB)  &none  &none  &none  &none  &kp RC(RS(TAB))  &kp RC(TAB)  &none  &kp BSPC  &kp LCTRL  &none  &kp LS(LA(TAB))  &kp LA(TAB)  &kp LEFT_SHIFT  &none  &none  &kp RIGHT_SHIFT  &kp RS(RA(TAB))  &kp RA(TAB)  &none  &none  &none  &none  &kp LS(LG(TAB))  &kp LG(TAB)  &none  &none  &none  &none  &kp RG(RS(TAB))  &kp RG(TAB)  &none  &none  &none  &kp TAB  &kp SPACE  &kp RET  &kp TAB  &none
+&none  &none  &kp LS(LC(TAB))  &kp LC(TAB)  &none  &none  &none  &none  &kp RC(RS(TAB))  &kp RC(TAB)  &none  &kp BSPC  &kp LCTRL  &caps_word  &kp LS(LA(TAB))  &kp LA(TAB)  &kp LEFT_SHIFT  &none  &none  &kp RIGHT_SHIFT  &kp RS(RA(TAB))  &kp RA(TAB)  &none  &none  &none  &none  &kp LS(LG(TAB))  &kp LG(TAB)  &none  &none  &none  &none  &kp RG(RS(TAB))  &kp RG(TAB)  &none  &none  &none  &kp TAB  &kp SPACE  &kp RET  &kp TAB  &none
             >;
         };
 
