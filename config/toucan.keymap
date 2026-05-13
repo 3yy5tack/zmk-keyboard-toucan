@@ -71,14 +71,14 @@
         base {
             display-name = "BASE";
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp LCTRL  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G  &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RCTRL SEMICOLON  &kp SQT  &kp LSHFT  &hl 3 Z  &kp X  &kp C  &hl 4 V  &kp B  &kp N  &hl 4 M  &kp COMMA  &kp DOT  &hl 3 SLASH  &kp ESC  &kp TAB  &lt 1 SPACE  &kp SPACE  &kp RET  &lt 2 ENTER  &hl 3 BACKSPACE
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp LCTRL  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G  &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RCTRL SEMICOLON  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &hl 4 V  &kp B  &kp N  &hl 4 M  &kp COMMA  &kp DOT  &hl 3 SLASH  &kp ESC  &kp TAB  &hl 4 TAB  &hl 1 SPACE  &hl 2 ENTER  &hl 3 BACKSPACE  &hl 3 BACKSPACE
             >;
         };
 
         nav {
             display-name = "NAV";
             bindings = <
-&kp TAB  &kp ESCAPE  &kp HOME  &kp UP_ARROW  &kp END  &kp DELETE  &kp X  &kp N7  &kp N8  &kp N9  &caps_word  &kp BSPC  &bt BT_CLR  &s_caps CAPSLOCK LEFT_SHIFT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INS  &hex_head  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp BACKSPACE  &trans  &kp LSHFT  &kp A  &kp B  &kp C  &kp D  &kp E  &kp F  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT  &trans  &none  &trans  &kp SPACE  &kp RET  &kp KP_NUMBER_0  &kp X
+&kp TAB  &kp ESCAPE  &kp HOME  &kp UP_ARROW  &kp END  &kp DELETE  &kp X  &kp N7  &kp N8  &kp N9  &caps_word  &kp BSPC  &bt BT_CLR  &s_caps CAPSLOCK LEFT_SHIFT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INS  &caps_word  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &hex_head  &trans  &kp LSHFT  &kp A  &kp B  &kp C  &kp D  &kp E  &kp F  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT  &trans  &none  &trans  &kp SPACE  &kp N0  &kp BACKSPACE  &kp X
             >;
         };
 
@@ -92,14 +92,14 @@
         adj {
             display-name = "ADJ";
             bindings = <
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &kp BSPC  &kp LCTRL  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &kp RIGHT_SHIFT  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL  &trans  &bt LSHFT  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &kp RET  &trans  &kp RALT
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &kp BSPC  &kp LCTRL  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &sk RIGHT_SHIFT  &sk RIGHT_GUI  &sk RIGHT_ALT  &sk RCTRL  &trans  &bt LSHFT  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &kp RET  &trans  &kp RALT
             >;
         };
 
         sw {
             display-name = "SW";
             bindings = <
-&none  &none  &kp LS(LC(TAB))  &kp LC(TAB)  &none  &none  &none  &none  &kp RC(RS(TAB))  &kp RC(TAB)  &none  &kp BSPC  &kp LCTRL  &caps_word  &kp LS(LA(TAB))  &kp LA(TAB)  &kp LEFT_SHIFT  &none  &none  &kp RIGHT_SHIFT  &kp RS(RA(TAB))  &kp RA(TAB)  &none  &none  &none  &none  &kp LS(LG(TAB))  &kp LG(TAB)  &none  &none  &none  &none  &kp RG(RS(TAB))  &kp RG(TAB)  &none  &none  &none  &kp TAB  &kp SPACE  &kp RET  &kp TAB  &none
+&none  &none  &kp LS(LC(TAB))  &kp LC(TAB)  &none  &none  &none  &none  &kp RC(RS(TAB))  &kp RC(TAB)  &none  &kp BSPC  &kp LCTRL  &sk LCTRL  &sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &none  &none  &kp RIGHT_SHIFT  &kp RS(RA(TAB))  &kp RA(TAB)  &none  &none  &none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none  &none  &none  &kp RG(RS(TAB))  &kp RG(TAB)  &none  &none  &none  &kp TAB  &kp SPACE  &kp RET  &kp TAB  &none
             >;
         };
 
