@@ -25,13 +25,13 @@
         combo_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <14 15>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <21 20>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
     };
 
