@@ -22,8 +22,8 @@
             key-positions = <5 17 29>;
         };
 
-        combo_esc {
-            bindings = <&kp ESCAPE>;
+        combo_tab {
+            bindings = <&kp TAB>;
             key-positions = <14 15>;
             layers = <0 1 2>;
         };
@@ -32,6 +32,11 @@
             bindings = <&kp ENTER>;
             key-positions = <21 20>;
             layers = <0 1 2>;
+        };
+
+        combo_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
         };
     };
 
